@@ -37,11 +37,13 @@ To do this, I'd need a way to find the IP address of the Pi.  The thing is, the 
 OK but my home address is always changing (or changing enough that I couldn't reliably get to it via an IP address).  What to do?
 
 ### Pi from Anywhere: Dynamic DNS Services
-I figured out that if I could just find some way to always have the IP address of my home machines updated then I would know where to point my VNC client (or ssh client for that matter).  There are services that do this: they're called Dynamic DNS services.  Basically they run DNS servers that get constant updates from a machine on your network.  I signed up for one at Dyn.com.  You have to provide them CC info for a 14 day 'Pro' trial, but if you cancel you can keep one Dyn DNS server for free, which is all most people will need.  They'll autocomplete your IP, which will get you started if you're setting up from home, but you'll need to install and run an update client so that your IP information stays up to date in their servers.  Dyn's update clients are [here](http://dyn.com/support/clients/).  You will pick a hostname for your remote access point from one of Dyn's 260 servers such as gotdns.org.  You'll end up with yourname.gotdns.org or something similar.
+I figured out that if I could just find some way to always have the IP address of my home machines updated then I would know where to point my VNC client (or ssh client for that matter).  There are services that do this: they're called Dynamic DNS services.  Basically they run DNS servers that get constant updates from a machine on your network.  I signed up for one at Dyndns.com, but [there are lots'(http://dnslookup.me/dynamic-dns/).  You have to provide them CC info for a 14 day 'Pro' trial, but if you cancel you can keep one Dyn DNS server for free, which is all most people will need.  They'll autocomplete your IP, which will get you started if you're setting up from home, but you'll need to install and run an update client so that your IP information stays up to date in their servers.  Dyn's update clients are [here](http://dyn.com/support/clients/).  You will pick a hostname for your remote access point from one of Dyn's 260 servers such as gotdns.org.  You'll end up with yourname.gotdns.org or something similar.
 
 If you've configured this correctly, you should be able to get to your home internet router through that new domain you just setup.  Check it like this:
-![traceroute](images/traceroute.jpg)
-
+```
+> traceroute yourname.gotdns.org
+```
+Replace `yourname.gotdns.org` with the name you registered with your Dynamic DNS provider.
 
 ### More on DNS
 DNS is the foundation of the Internet.  We don't really need to know much about it because it works so well, but its' fascinating to think how well the system works.  Here's an [animated video](http://www.youtube.com/watch?feature=player_embedded&v=2ZUxoi7YNgs
