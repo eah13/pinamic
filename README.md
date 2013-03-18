@@ -15,7 +15,7 @@ I recently undertook a project to be able to get to my Raspberry Pi over the int
 
 ### What you'll Need:
 * A working, Internet-connected Raspberry Pi
-* tightvncserver running on your Pi (this is a  tutorial on remote access, not VNC; see [here](http://interlockroc.org/2012/12/06/raspberry-pi-macgyver/) for that)
+* tightvncserver running on your Pi (this is a  tutorial on remote access, not VNC; see [here](http://trevorappleton.blogspot.com/2013/03/remotely-connect-to-raspberry-pi-desktop.html) or [here](http://interlockroc.org/2012/12/06/raspberry-pi-macgyver/) for that)
 * ssh running on your Pi (you can do this on Raspbian with raspi-config as explained [here](http://elinux.org/RPi_raspi-config#ssh_-_Enable_or_disable_ssh_server))
 * A router you control (which means this probably wont work at your home or school)
 * A dynamic DNS service provider (I use dyn.com as described below)
@@ -89,7 +89,7 @@ I'm not the first or the last to do this or some version of it.  These links are
 * Edmundo Fuentes' walkthru [here](http://edmundofuentes.com/post/45179343394/raspberry-pi-without-keyboard-mouse-nor-screen)
 * Interloc Rochester walkthru [here](http://interlockroc.org/2012/12/06/raspberry-pi-macgyver/)
 * Igor Partola teaches you why IPv6 means you don't need Dynamic DNS anymore [here](http://igorpartola.com/ipv6-2/you-need-ipv6-now-and-heres-how-to-get-it)
-
+* Trevor Appleton's VNC walkthru [here](http://trevorappleton.blogspot.com/2013/03/remotely-connect-to-raspberry-pi-desktop.html)
 ## To be Continued...
 This is a rough guide that needs some improvement.  If there are parts that aren't clear let me know via the Issues tab and I'll make them better.  Or, better yet, open and issue and then submit a pull request!  Current needs:
 * A diagram of port mapping
