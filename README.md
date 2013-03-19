@@ -2,6 +2,7 @@ pinamic
 =======
 
 Walkthru: Remote to your Raspberry Pi from anywhere with Dynamic DNS
+
 A guide for educators and others who would like remote servings of Raspberry Pi.  Currently targeted for Mac users.
 
 ### - Under construction -
@@ -17,7 +18,7 @@ I recently undertook a project to be able to get to my Raspberry Pi over the int
 * A working, Internet-connected Raspberry Pi
 * tightvncserver running on your Pi (this is a  tutorial on remote access, not VNC; see [here](http://trevorappleton.blogspot.com/2013/03/remotely-connect-to-raspberry-pi-desktop.html) or [here](http://interlockroc.org/2012/12/06/raspberry-pi-macgyver/) for that)
 * ssh running on your Pi (you can do this on Raspbian with raspi-config as explained [here](http://elinux.org/RPi_raspi-config#ssh_-_Enable_or_disable_ssh_server))
-* A router you control (which means this probably wont work at your home or school)
+* A router you control (which means this probably wont work at your office or school)
 * A dynamic DNS service provider (I use dyn.com as described below)
 * A Mac or the ability to translate these instructions into your OS.  If you can write a version of this tutorial for another OS, please Fork and do so!
 
