@@ -24,7 +24,7 @@ I recently undertook a project to be able to get to my Raspberry Pi over the int
 
 ### Background: VNCing for peripheral-free Pi
 As I describe [here](http://hastac.org/blogs/eah13/2013/02/16/how-i-use-hastac-case-study), VNCing into your Pi is a great way to use it without needing a bunch of peripherals.  I found a [great tutorial](http://interlockroc.org/2012/12/06/raspberry-pi-macgyver/) about how to access your Pi locally from a Mac or Linux machine from Interloc Rochester.  This makes it easy to hack on your Pi- all you need are your pi, an ethernet cable, and a micro USB cable and you're able to access your Pi's full graphical glory from the comfort of your couch.  This makes teaching with the Pi, as I'll be doing at UNC in the fall, much more practical because students can hack at home without an external monitor.  Here's my Pi on my Mac:
-![Pi on Mac](images/pionmac.png)
+![Pi on Mac](https://github.com/eah13/pinamic/blob/master/images/pionmac.png)
 
 
 This arrangement also makes it very easy to do screen grabs of the Pi (`shift-ctrl-4` on Macs) and upload them to blog posts like this or put them in the course materials I'm working on.
@@ -60,26 +60,26 @@ I'm using Apple's Airport Extreme for my router so the instructions are based on
 *First*, connect your Pi into your router however you do so and make sure you have internet.  (type ping google.com in a terminal to check quickly).
 
 *Next*, find out what your Pi's MAC address is.  This address is used to distinguish between different hardware (computers, phones, etc) connecting to a router.  I typed `ifconfig` to do this:
-![ifconfig](images/ifconfig.jpg)
+![ifconfig](https://github.com/eah13/pinamic/blob/master/images/ifconfig.jpg)
 
 The MAC address of my Pi is the HWaddr listed under eth0.  If you're using wireless you will want to pick the HWaddr of that device instead.  There are other services that can get you this number as well.  I recommend Fing if you have an iPhone or iPad.
 
 *Next*, make sure your router gives your Pi the same  local IP address every time.  For my setup that meant going to the Airport Utility, selecting my router, and editing under the DHCP Reservations under Network tab.  I added the Raspberry Pi's MAC address and picked a IP address that was a multiple of 10 on the end for ease of remembering.  
-![DHCP](images/dhcpreserv.jpg)
+![DHCP](https://github.com/eah13/pinamic/blob/master/images/dhcpreserv.jpg)
 
 *Next*, you have to configure your router to forward requests that come in on a specific port to the same address we just reserved for the Pi. For my router this is again under the Network tab in a section called Port Forwarding.  The 'Public TCP Port' box is the externally facing port, while the Private IP Address should be our reservation.  Think of it kind of like a PIN number: it's an added (but weak) layer of security against random people trying to get into your Pi.  The Private TCP Port should be 22, which is the standard ssh port. (why ssh?  Because we're going to tunnel in to VNC thru ssh).  Also, check the Enable NAT Port Mapping Protocol box.
-![Port Mapping](images/portmapping.jpg)
+![Port Mapping](https://github.com/eah13/pinamic/blob/master/images/portmapping.jpg)
 
 Your router will reset and once it's back online, any calls to yourdynamichost.com:3000 (or whatever port you chose) should now route straight to your Pi.  Sweet!
 
  
 
 Now you'll need [Chicken of the VNC](http://sourceforge.net/projects/chicken/files/?source=navbar) or another VNC Client to connect to your vncserver running on your Pi. My setup looks like this:
-![VNC Setup](images/VNCsetup.jpg)
+![VNC Setup](https://github.com/eah13/pinamic/blob/master/images/VNCsetup.jpg)
 
 
 And by pressing Connect, I get this:
-![Remote Raspberry Pi](images/remotepi.jpg)
+![Remote Raspberry Pi](https://github.com/eah13/pinamic/blob/master/images/remotepi.jpg)
 
 
  
